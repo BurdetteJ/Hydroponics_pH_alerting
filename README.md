@@ -15,7 +15,7 @@ I found that the simplest way to achieve remote access was to configure a static
 
 Once remote access is established, simply run the phpolling.py script with your python installation. The user will be asked to provide the following configuration values upon startup:
 
-**Maximum & Minimum pH**: The constitute the pH boundaries. The alert condition is any sensor measurement outside the range between these two values.
+**Maximum & Minimum pH**: These values constitute the high and low pH boundaries. The alert condition is any sensor measurement outside the range between these two values.
     
 **Polling interval**: The amount of time to wait in between getting pH measurements from the sensor.
 

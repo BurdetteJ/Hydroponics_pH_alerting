@@ -6,7 +6,14 @@ Atlas Scientific provides some drivers, helpful sample code, and basic Raspberry
 Atlast Scientific ftdi driver:: https://github.com/Atlas-Scientific/R-pi-database-
 
 # Objective
-The goal of this project is to have the pH sensor perform continuous polling of the reservoir pH, sending out automated alerts when a pH measurement falls outside of acceptable boundaries. The user is asked to provide the following configuration values upon running the phpolling class:
+The goal of this project is to have the pH sensor perform continuous polling of the reservoir pH, sending out automated alerts when a pH measurement falls outside of acceptable boundaries. 
+
+# Running the application
+I have set up remote access for my raspberry pi so that I can start/stop the pH polling application as needed from anywhere on my local network. A variety of remote access techniques are discussed here: https://raspberrytips.com/remote-desktop-raspberry-pi/
+
+I found that the simplest way to achieve remote access was to configure a static local ip for my raspberry pi, pair that ip with a nickname in the hosts file of a windows machine, and then use RDP to connect to that nickname from the aforementioned windows machine.
+
+Once remote access is established, simply run the phpolling.py script with your python installation. The user will be asked to provide the following configuration values upon startup:
 
 **Maximum & Minimum pH**: The constitute the pH boundaries. The alert condition is any sensor measurement outside the range between these two values.
     

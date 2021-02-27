@@ -18,8 +18,8 @@ client = Client("some_account_id", "some_auth_token")
         if(now - self.lastSend).total_seconds() > throttle or self.justStarted:
             #print("Warning, ph is out of bounds: " + lastLine)
             client.messages.create(to="some_phone_num", 
-                           #from_="some_other_phone_num", 
-                           #body="pH level outside of accepted boundaries: " + lastLine)
+                           from_="some_other_phone_num", 
+                           body="pH level outside of accepted boundaries: " + lastLine)
             self.lastSend = now
         # We have alerted once, so now the throttle can kick in
         if self.justStarted:

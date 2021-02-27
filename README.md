@@ -5,7 +5,7 @@ Atlas Scientific provides some drivers, helpful sample code, and basic Raspberry
 
 Atlast Scientific ftdi driver:: https://github.com/Atlas-Scientific/R-pi-database-
 
-#Objective
+# Objective
 The goal of this project is to have the pH sensor perform continuous polling of the reservoir pH, sending out automated alerts when a pH measurement falls outside of acceptable boundaries. The user is asked to provide the following configuration values upon running the phpolling class:
 
 **Maximum & Minimum pH**: The constitute the pH boundaries. The alert condition is any sensor measurement outside the range between these two values.
@@ -14,5 +14,5 @@ The goal of this project is to have the pH sensor perform continuous polling of 
 
 **Alerting interval**: The minimum interval to wait between sending out alerts. This essentially acts as a throttle, preventing a flood of messages in the event that the polling interval is short and the probe is getting measurements outside of the pH boundaries.
 
-#Alerting Configuration
+# Alerting Configuration
 The phpolling class is intended to be as decoupled as possible from the alerting class so that the user can implement their own alerting schema as they see fit. Some common alerting techniques to consider are sms and smtp; the example alerting class here uses Twilio for sms alerting. It is worth noting that many such communications APIs come with monetary costs.

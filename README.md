@@ -22,4 +22,4 @@ Once remote access is established, simply run the phpolling.py script with your 
 **Alerting interval**: The minimum interval to wait between sending out alerts. This essentially acts as a throttle, preventing a flood of messages in the event that the polling interval is short and the probe is getting measurements outside of the pH boundaries.
 
 # Alerting Configuration
-The phpolling class is intended to be as decoupled as possible from the alerting class so that the user can implement their own alerting schema as they see fit. Some common alerting techniques to consider are sms and smtp; the example alerting class here uses Twilio for sms alerting. It is worth noting that many such communications APIs come with monetary costs.
+The phpolling class is intended to be as decoupled as possible from the alerting class so that the user can implement the most appropriate alerting setup for their n eeds. Some common alerting techniques to consider are sms and smtp. The example alerting class here uses Twilio for sms alerting, but it is worth noting that many such communications APIs come with monetary costs.

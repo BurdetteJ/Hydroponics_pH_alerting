@@ -27,4 +27,5 @@ The phpolling class is intended to be as decoupled as possible from the alerting
 # Future work
 * Logging
 * Accepting additional info for collation with pH logging (e.g. "replentished nutrient solution with X gallons of water, Y tablespoons of Z nutrient type", "administered ph up/down")
+* Canary process
 * Research into 3g/4g modems for sms communication via raspberry pi, bypassing the need for proprietary APIs

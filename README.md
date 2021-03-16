@@ -22,4 +22,9 @@ Once remote access is established, simply run the phpolling.py script with your 
 **Alerting interval**: The minimum interval to wait between sending out alerts. This essentially acts as a throttle, preventing a flood of messages in the event that the polling interval is short and the probe is getting measurements outside of the pH boundaries.
 
 # Alerting Configuration
-The phpolling class is intended to be as decoupled as possible from the alerting class so that the user can implement the most appropriate alerting setup for their needs (some common alerting techniques to consider are sms and smtp). The example alerting class here uses Twilio for sms alerting; it is worth noting many sms APIs (including Twilio's) have a monetary cost. Future work may involve looking into 3g/4g modems for sms communication via raspberry pi.
+The phpolling class is intended to be as decoupled as possible from the alerting class so that the user can implement the most appropriate alerting setup for their needs (some common alerting techniques to consider are sms and smtp). The example alerting class here uses Twilio for sms alerting; it is worth noting many sms APIs (including Twilio's) have a monetary cost. 
+
+# Future work
+* Logging
+* Accepting additional info for collation with pH logging (e.g. "replentished nutrient solution with X gallons of water, Y tablespoons of Z nutrient type", "administered ph up/down")
+* Research into 3g/4g modems for sms communication via raspberry pi, bypassing the need for proprietary APIs
